@@ -1,0 +1,40 @@
+<form class="formStructure">
+  <div>
+    <h1>Create Account</h1>
+  </div>
+  <mat-form-field class="formField">
+    <mat-label>Name</mat-label>
+    <input matInput type="text">
+  </mat-form-field>
+
+  <mat-form-field class="formField">
+    <mat-label>Enter your email</mat-label>
+    <input matInput type="email">
+    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+  </mat-form-field>
+
+  <mat-form-field class="formField">
+    <mat-label>Enter Phone Number</mat-label>
+    <input type="tel" matInput>
+  </mat-form-field>
+
+  <mat-form-field class="formField">
+    <mat-label>Enter your password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-radio-group aria-label="Select an option">
+    <mat-radio-button value="female">Female</mat-radio-button>
+    <mat-radio-button value="male">Male</mat-radio-button>
+    <mat-radio-button value="others">Others</mat-radio-button>
+  </mat-radio-group>
+  <div>
+    <button mat-raised-button color="primary" class="buttonClass">Submit</button>
+    <button mat-raised-button color="primary" class="buttonClass">Already Signed-In?</button>
+  </div>
+
+</form>
