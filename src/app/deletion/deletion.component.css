@@ -1,0 +1,8 @@
+.buttonClass{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    /* width: 500px;  */
+    height: 45px; 
+    margin-bottom: 10px;
+}

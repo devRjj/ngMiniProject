@@ -1,0 +1,9 @@
+{
+    "/api/*": {
+      "target": "https://devrunner.co.in",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true
+    }
+  }
+  

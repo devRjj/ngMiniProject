@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Delete file</h1>
+<div mat-dialog-content matDialogClose>
+  Would you like to delete this user?
+</div>
+<div mat-dialog-actions class="buttonClass">
+  <button mat-raised-button color="warn" style="margin-left: 18px;" matDialogClose mat-dialog-close="">No</button>
+  <button mat-raised-button color="accent" style="width: 150px; margin-right: 18px;" (click)="onDelete()">Yes</button>
+</div>

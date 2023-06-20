@@ -1,0 +1,14 @@
+.tableData{
+    width: 1050px;
+    margin: auto;
+    margin-top: 30px;
+    /* border: 1px solid whitesmoke; */
+}
+
+.formField {
+    width: 1050px;
+}
+
+.mdc-data-table__cell{
+    text-align: left;
+}

@@ -1,0 +1,31 @@
+<h1 mat-dialog-title >Update Account</h1>
+<form [formGroup]="updateForm" class="formStructure">
+    <div mat-dialog-content>
+        <mat-form-field class="formField">
+            <mat-label>Name</mat-label>
+            <input type="text" matInput formControlName="user_name">
+        </mat-form-field>
+        <mat-form-field class="formField">
+            <mat-label>Email</mat-label>
+            <input type="text" matInput formControlName="user_email">
+        </mat-form-field>
+        <mat-form-field class="formField">
+            <mat-label>Phone Number</mat-label>
+            <input type="text" matInput formControlName="user_phone_no">
+        </mat-form-field>
+        <mat-form-field class="formField">
+            <mat-label>Password</mat-label>
+            <input type="text" matInput formControlName="user_pwd">
+        </mat-form-field>
+        <mat-radio-group aria-label="Select an option" formControlName="user_gender">
+            <mat-radio-button value="female">Female</mat-radio-button>
+            <mat-radio-button value="male">Male</mat-radio-button>
+            <mat-radio-button value="others">Others</mat-radio-button>
+          </mat-radio-group>
+
+        </div>
+        <div mat-dialog-actions class="buttonClass">
+            <button mat-raised-button color="warn" style="margin-left: 18px;" mat-dialog-close="">Close</button>
+            <button mat-raised-button color="accent" style="width: 150px; margin-right: 18px;" cdkFocusIntial (click)="updateUserData()">Update</button>
+        </div>
+</form>

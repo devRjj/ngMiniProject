@@ -9,6 +9,10 @@ import { LoginComponent } from './login/login.component';
 import { UserlistComponent } from './userlist/userlist.component';
 import { MaterialModule } from './material/material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { EditComponent } from './edit/edit.component';
+import { DeletionComponent } from './deletion/deletion.component';
 
 
 @NgModule({
@@ -16,14 +20,18 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     RegistrationComponent,
     LoginComponent,
-    UserlistComponent
+    UserlistComponent,
+    UserDetailsComponent,
+    EditComponent,
+    DeletionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

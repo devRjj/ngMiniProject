@@ -1,40 +1,39 @@
-<form class="formStructure">
+<form [formGroup]="registrationForm" class="formStructure">
   <div>
     <h1>Create Account</h1>
   </div>
   <mat-form-field class="formField">
     <mat-label>Name</mat-label>
-    <input matInput type="text">
+    <input matInput type="text" formControlName="user_name">
   </mat-form-field>
 
   <mat-form-field class="formField">
     <mat-label>Enter your email</mat-label>
-    <input matInput type="email">
+    <input matInput type="email" formControlName="user_email">
     <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
   </mat-form-field>
-
-  <mat-form-field class="formField">
-    <mat-label>Enter Phone Number</mat-label>
-    <input type="tel" matInput>
-  </mat-form-field>
-
   <mat-form-field class="formField">
     <mat-label>Enter your password</mat-label>
-    <input matInput [type]="hide ? 'password' : 'text'">
+    <input matInput [type]="hide ? 'password' : 'text'" formControlName="user_pwd">
     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
       [attr.aria-pressed]="hide">
       <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
     </button>
   </mat-form-field>
 
-  <mat-radio-group aria-label="Select an option">
+  <mat-form-field class="formField">
+    <mat-label>Enter Phone Number</mat-label>
+    <input type="tel" matInput formControlName="user_phone_no">
+  </mat-form-field>
+
+  <mat-radio-group aria-label="Select an option" formControlName="user_gender">
     <mat-radio-button value="female">Female</mat-radio-button>
     <mat-radio-button value="male">Male</mat-radio-button>
     <mat-radio-button value="others">Others</mat-radio-button>
   </mat-radio-group>
   <div>
-    <button mat-raised-button color="primary" class="buttonClass">Submit</button>
-    <button mat-raised-button color="primary" class="buttonClass">Already Signed-In?</button>
+    <button mat-raised-button color="primary" class="buttonClass" (click)="onSubmit()">Submit</button>
+    <button mat-raised-button color="primary" class="buttonClass" routerLink="/login">Already Signed-In?</button>
   </div>
 
 </form>

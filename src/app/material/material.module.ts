@@ -7,6 +7,12 @@ import {MatRadioModule} from '@angular/material/radio'
 import {MatToolbarModule} from '@angular/material/toolbar'
 import {MatSidenavModule} from '@angular/material/sidenav'
 import {MatListModule} from '@angular/material/list'
+import {MatTableModule} from '@angular/material/table'
+import {MatSortModule} from '@angular/material/sort'
+import {MatPaginatorModule} from '@angular/material/paginator'
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatCardModule} from '@angular/material/card'
+
 
 const MaterialComponents =[
   MatButtonModule,
@@ -16,7 +22,12 @@ const MaterialComponents =[
   MatRadioModule,
   MatToolbarModule,
   MatSidenavModule,
-  MatListModule
+  MatListModule,
+  MatTableModule,
+  MatSortModule,
+  MatPaginatorModule,
+  MatDialogModule,
+  MatCardModule
 ]
 
 @NgModule({
